@@ -31,9 +31,9 @@ class PlaneModel
     /**
      * @var string
      *
-     * @ORM\Column(name="manufaturer", type="string", length=255, nullable=true)
+     * @ORM\Column(name="manufacturer", type="string", length=255, nullable=true)
      */
-    private $manufaturer;
+    private $manufacturer;
 
     /**
      * @var int
@@ -185,5 +185,29 @@ class PlaneModel
     public function getStatus()
     {
         return $this->status;
+    }
+
+    /**
+     * Set manufacturer
+     *
+     * @param string $manufacturer
+     *
+     * @return PlaneModel
+     */
+    public function setManufacturer($manufacturer)
+    {
+        $this->manufacturer = $manufacturer;
+
+        return $this;
+    }
+
+    /**
+     * Get manufacturer
+     *
+     * @return string
+     */
+    public function getManufacturer()
+    {
+        return $this->manufacturer;
     }
 }

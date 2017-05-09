@@ -38,7 +38,7 @@ class Reservation
 
     /**
      *
-     *  @ORM\ManyToMany(targetEntity="User", mappedBy="reservation")
+     *  @ORM\ManyToMany(targetEntity="User", mappedBy="reservations")
      */
     private $passengers;
 
@@ -140,5 +140,16 @@ class Reservation
     public function getPassengers()
     {
         return $this->passengers;
+    }
+
+    
+    /**
+     * Get string
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->name;
     }
 }

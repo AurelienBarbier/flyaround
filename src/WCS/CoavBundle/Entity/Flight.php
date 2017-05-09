@@ -28,10 +28,10 @@ class Flight
      */
     private $departure;
 
-    /**
-     * @var string
+   /**
+     * 
      *
-     * @ORM\Column(name="arrival", type="string", length=4)
+     * @ORM\ManyToOne(targetEntity="Terrain", inversedBy="arrivals")
      */
     private $arrival;
 
